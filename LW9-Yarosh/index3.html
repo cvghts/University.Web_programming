@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task 3</title>
+	<style>
+		.square {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 72px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 10px;
+            border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<div id="task1">
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+	</div>
+
+	<script>
+		let squares = document.querySelectorAll('.square');
+		let colors = ['blue', 'green', 'yellow'];
+		let currentColor = 0;
+
+		squares.forEach(square => {
+			square.addEventListener('click', () => {
+				square.style.backgroundColor = colors[currentColor];
+				currentColor = (currentColor + 1) % colors.length;
+			});
+
+			let number = 0;
+			let numberElement = document.createElement('div');
+			numberElement.textContent = number;
+			square.appendChild(numberElement);
+
+			let plusButton = document.createElement('button');
+			plusButton.textContent = '+';
+			plusButton.addEventListener('click', () => {
+				number++;
+				numberElement.textContent = number;
+			});
+			square.appendChild(plusButton);
+
+			let minusButton = document.createElement('button');
+			minusButton.textContent = '-';
+			minusButton.addEventListener('click', () => {
+				number--;
+				numberElement.textContent = number;
+			});
+			square.appendChild(minusButton);
+		});
+	</script>
+</body>
+</html>

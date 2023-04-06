@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task 1</title>
+	<style>
+		.container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .square {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 72px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+
+        .one {
+            background-color: #c7f5ff;
+        }
+
+        .two {
+            background-color: #00d9ff;
+        }
+
+        .three {
+            background-color: #6eb4ff;
+        }
+
+        .four {
+            background-color: #62b0f9;
+        }
+
+        .five {
+            background-color: #348fff;
+        }
+
+        .number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .btn {
+            position: absolute;
+            bottom: 20px;
+            width: 75px;
+            height: 50px;
+            font-size: 32px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-plus {
+            left: 20px;
+            background-color: #1fe371;
+        }
+
+        .btn-minus {
+            right: 20px;
+            background-color: #c44d4d;
+        }
+
+	</style>
+</head>
+<body>
+	<div class="container">
+        <div class="square one">
+            <div class="number">0</div>
+            <button class="btn btn-plus">+</button>
+            <button class="btn btn-minus">-</button>
+        </div>
+        <div class="square two">
+            <div class="number">0</div>
+            <button class="btn btn-plus">+</button>
+            <button class="btn btn-minus">-</button>
+        </div>
+        <div class="square three">
+            <div class="number">0</div>
+            <button class="btn btn-plus">+</button>
+            <button class="btn btn-minus">-</button>
+        </div>
+        <div class="square four">
+            <div class="number">0</div>
+            <button class="btn btn-plus">+</button>
+            <button class="btn btn-minus">-</button>
+        </div>
+        <div class="square five">
+            <div class="number">0</div>
+            <button class="btn btn-plus">+</button>
+            <button class="btn btn-minus">-</button>
+        </div>
+      </div>
+            
+    <script>
+		document.addEventListener('DOMContentLoaded', function() {
+            const squares = document.querySelectorAll('.square');
+            squares.forEach(function(square) {
+                const numberElement = square.querySelector('.number');
+                const plusButton = square.querySelector('.btn-plus');
+                const minusButton = square.querySelector('.btn-minus');
+                let number = 0;
+                plusButton.addEventListener('click', function() {
+                    number++;
+                    numberElement.textContent = number;
+                });
+                minusButton.addEventListener('click', function() {
+                    number--;
+                    numberElement.textContent = number;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

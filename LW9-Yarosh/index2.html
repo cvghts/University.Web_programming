@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .container {
+        display: flex;
+      }
+      .square {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="square" id="square1"></div>
+      <div class="square" id="square2"></div>
+      <div class="square" id="square3"></div>
+      <div class="square" id="square4"></div>
+      <div class="square" id="square5"></div>
+    </div>
+    <script>
+      const squares = document.querySelectorAll('.square');
+      squares.forEach((square) => {
+        let colors = ['blue', 'green', 'yellow'];
+        let index = 0;
+        square.addEventListener('click', () => {
+          square.style.backgroundColor = colors[index];
+          index = (index + 1) % colors.length;
+        });
+      });
+    </script>
+  </body>
+</html>
+
