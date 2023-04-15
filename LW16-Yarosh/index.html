@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Series Search App</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Scripts -->
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Series Search App</h1>
+    <div class="search-container">
+      <input type="text" placeholder="Enter series name here..." id="series-name" value="witcher" />
+      <button tabindex="0" id="search-btn">Search</button>
+    </div>
+    <div id="result">
+    </div>
+  </div>
+  <template class="template-page">
+    <div class="info">
+      <div class="main-info">
+        <img src='#' class="poster">
+        <h2>title</h2>
+        <div class="rating">
+          <h3>Rating: <span>rating</span></h3>
+        </div>
+      </div>
+      <div class="genre">genres</div>
+      <div class="details">
+        <p>Status: <span class="status">status</span></p>
+        <p>Language: <span class="lang">lang</span></p>
+        <p>Premiered: <span class="premiered">data</span></p>
+        <a class="official-site" href="#">Official Site</a>
+        <div class="summary">some description</div>
+      </div>
+      <div class="actors">Cast: </div>
+    </div>
+  </template>
+</body>
+
+</html>
