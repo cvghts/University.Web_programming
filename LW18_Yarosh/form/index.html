@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <script src="https://kit.fontawesome.com/f40fd5b04a.js" crossorigin="anonymous"></script>
+  <script src="./script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Raleway:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <section class="header">
+        <div class="logo-block">
+          <i class="fa-regular fa-user"></i>
+          <span class="logo-text">nameless</span>
+        </div>
+      </section>
+
+      <section class="login-form_section">
+        <h2 class="login-form_title">Welcome back</h2>
+        <p class="login-form_descr">Please enter your contact details to connect.</p>
+        <form action="/" method="post" class="login-form" id="login-form">
+          <label for="user-email">Email address</label>
+          <input id="user-email" name="user-email" type="text" placeholder="Your email">
+
+          <label for="user-password">Password</label>
+          <p class="for-password">[ at least 7 characters, which contain at least one lowercase letter, one uppercase
+            letter, one numeric
+            digit, and one special character (@$#!?&) ]</p>
+          <input id="user-password" name="user-password" type="password" placeholder="Your password">
+
+          <div class="block-checkbox">
+            <input type="checkbox" name="remember-me" id="remember-me">
+            <label for="remember-me">Remember me</label>
+            <a href="#">Forgot password</a>
+          </div>
+
+          <button class="btn btn-primary" type="submit" value="Submit">Log in</button>
+          <button class="btn btn-secondary" type="submit" value="Submit with Google" formaction="/submit-google">
+            <i class="fa-brands fa-google"></i>
+            Log in with Google</button>
+          <p class="dont-account">Don’t have an account? <a href="#">Sign up here</a></p>
+        </form>
+      </section>
+
+
+      <div class="decorative"></div>
+    </div>
+  </main>
+</body>
+
+</html>
